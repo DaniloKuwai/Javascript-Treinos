@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:black;
+            color: white;
+            font:normal 20pt Arial;
+        }
+
+        h1{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        //se digitarmos dessa forma, a soma de qualquer número não vai ser feito
+        //porquê o window.prompt sempre retorna uma string e não um número
+        //então primeiro temos que converter os número em inteiro com o parseInt ou em numerós com , com o parseFloat
+        //ou então podemos deixar o próprio javascript identificar qual é o tipo utilizando só o Number
+
+        //Então temos 3 tipos de formas de usar a parte numérica
+        //var numero1 = Number.parseInt(window.prompt('Digite um número'))
+        //var numero2 = Number.parseFloat(window.prompt('Digite um número'))
+        //ou esse outro exemplo
+        var numero1 = Number(window.prompt('Digite um número'))
+        var numero2 = Number(window.prompt('Digite um número'))
+        
+        var resultado = numero1 + numero2
+        alert('O resultado da conta é: '+ resultado)
+
+        //Podemos também converter de número para string de 2 formas
+        //usando o método String
+        //ou usando por exemplo numero1.ToString()
+    </script>
+</body>
+</html>
