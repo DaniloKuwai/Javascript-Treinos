@@ -22,4 +22,35 @@ as 2 canetas para satisfazer a condição
 || -> Ou, pode ser uma ou outra condição, usando exemplo da caneta, caneta azul ou verde, vai dar true se
 eu receber uma das 2 condições
 
+Agora tem uma questão que é a ordem de resolução dos operadores, vamos ver nesse exemplo:
+
+a > b && b % 2
+
+1º ele vai fazer o operador aritmético b % 2
+2º depois ele vai resolver a > b
+3º por último ele vai resolver o &&
+
+Então vamos a ordem de precedência
+
+Operadores aritméticos -> () ** / ..
+Operadores de comparação -> > < >= ...
+Operadores lógicos
+!
+&&
+||
+Operadores ternários
+--------------------------------------------------------------------------------------
+E temos também os operadores ternários que são os símbolos ? e : , segue um exemplo:
+
+teste ? true : false
+mais prático com um exemplo prático:
+média >= 7.0 ? "Aprovado" : "Reprovado"
+Podemos ver um outro caso misturando alguns elementos
+
+var idade = 19
+var r = idade >=18 ? 'Maior : 'Menor'
+
+Ou seja nessa sentença, vai ser analisado se a idade é maior ou igual a 18 se for a variável r recebe maior se não ele recebe menor, por conta
+da questão da precedência
+
 -->
