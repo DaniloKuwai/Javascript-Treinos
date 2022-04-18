@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        body{
+            background: blue;
+            color:white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        /*Selecionando elemento por tag, porém temos 2 tags p no exemplo, para selecionar o primeiro
+        abrimos colchetes e colocamos o número 0 para selecionar o primeiro elemento do array*/
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('Está escrito assim no 1° parágrafo: ' + p1.innerText)
+        /*Esse método innerText replica o que está escrito em p1*/
+        /*Agora podemos mudar a cor do parágrafo azul*/
+        p1.style.color = 'red'
+
+        /*Selecionando elementos por ID*/
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou Aguardando...'
+
+        /*Por name é a mesma coisa, o elemento precisa ter o atributo name*/
+        
+        /*E também podemos utilizar por seletores dessa forma*/
+
+        var d = window.document.querySelector('div#msg')
+        /*Estou selecionando por seletor igual css*/
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>
+
+<!--Anotações a parte
+
+    O que é DOM, é um acrônimo para Document Object Model, Basicamente é um conjunto de objetos
+    dentro do seu navegador que vai dar acesso aos componentes 
+
+    Arvore dom do seu site
+
+    Essa raiz a gente chamada de 
+
+    -> window
+
+    Tudo dentro do javascript está dentro de um objeto chamado window
+
+    Dentro do window tenho vários outros objetos, vamos a 3 exemplos:
+
+    location -> diz qual é a localização do seu site, qual é a url, qual foi a página anterior
+    document -> é o documento atual
+    history -> vai guardando de onde você veio, para onde você vai
+
+    ----------------------------------------------------------------
+
+    Dentro de document existe uma parte bem importante que é o html, que possui 2 filhos
+
+    o head e o body e dentro do head e do body temos vários outros chield(filhos), e o que está acima
+    por exemplo html que está acima chamamos de parent
+
+    -----------------------------------------------------------------
+
+    Dentro da nossa árvore DOM nós conseguimos acessar qualquer elemento(qualquer item da nossa árvore DOM), 
+    existem vários métodos de acesso, vamos as 5 principais:
+    
+    por Marca -> ou seja por TAG, para acessar por marca usamos
+    getElementsByTagName()['precisa sempre usar o colchete quando tem mais de um objeto, apontando 0,1']
+    por ID -> pelo id do elemento
+    getElementById()
+    por nome -> por name do elemento
+    getElementsByName()['precisa sempre usar o colchete quando tem mais de um objeto, apontando 0,1']
+    por classe ->  pela classe do elemento
+    getElementsByClassName()
+    por seletor -> 
+    
+     
+
+-->
