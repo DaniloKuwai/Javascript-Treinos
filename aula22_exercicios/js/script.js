@@ -37,6 +37,8 @@ function adicionar(){
     num.focus()//volta o foco para o campo paara digitar o número
 }
 
+
+
 function finalizar(){
     if(valores.length == 0){
         window.alert('Adicione valores')
